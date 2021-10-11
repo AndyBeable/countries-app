@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section class="country__container">
     <SearchBar />
     <ul>
       <li v-for="country in countries" :key="country.name">
@@ -13,7 +13,7 @@
         />
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -45,6 +45,10 @@ export default {
 <style scoped>
 ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.country__container {
+  padding: 0 6rem;
 }
 </style>

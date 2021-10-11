@@ -1,8 +1,10 @@
 <template>
-  <div class="search-bar">
-    <font-awesome-icon icon="search" class="icon" />
-    <img src="" alt="" />
-    <input type="text" placeholder="Search for a country..." />
+  <div class="search">
+    <div class="search__bar">
+      <font-awesome-icon icon="search" class="search__bar-icon" />
+      <input type="text" placeholder="Search for a country..." />
+    </div>
+    <div class="search__filter">Filter</div>
   </div>
 </template>
 
@@ -11,30 +13,31 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-input {
-  width: 30%;
-  margin-left: 6rem;
-  margin-bottom: 3rem;
-  padding: 1rem;
-  border: none;
-  background-color: var(--white);
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
 
-input::placeholder {
-  padding-left: 2rem;
-  color: var(--gray);
-}
+  &__bar {
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    min-width: 20rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
 
-.search-bar {
-  position: relative;
-}
+    &-icon {
+      color: var(--gray);
+    }
 
-.icon {
-  position: absolute;
-  top: 15px;
-  left: 110px;
-  color: var(--gray);
+    & input {
+      border: none;
+      margin-left: 5px;
+      cursor: text;
+      font-size: 1.2rem;
+    }
+  }
 }
 </style>
