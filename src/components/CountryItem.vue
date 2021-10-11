@@ -1,10 +1,10 @@
 <template>
-  <div class="country_card">
+  <div class="country__card">
     <a href="#">
-      <div class="country_card-img">
+      <div class="country__card-img">
         <img :src="flag" alt="" />
       </div>
-      <div class="country_stats">
+      <div class="country__card-stats">
         <h2>{{ name }}</h2>
         <p>
           <span>Popluation:</span>
@@ -30,34 +30,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.country_card {
+.country__card {
   display: flex;
   margin-bottom: 5rem;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  width: 20rem;
   height: 25rem;
 
-  &-img {
-    max-width: 100%;
-  }
-
   & img {
-    /* width: 100%; */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
-}
 
-.country_stats {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem 2rem;
-  width: 95%;
+  &-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem;
+    width: 90%;
 
-  & h2 {
-    margin-bottom: 1rem;
+    & h2 {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -66,6 +60,6 @@ p {
 }
 
 p span {
-  font-weight: 800;
+  font-weight: 600;
 }
 </style>
