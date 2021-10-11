@@ -35,11 +35,17 @@ export default {
   margin-bottom: 5rem;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  height: 25rem;
+  height: 27rem;
+  width: 20rem;
 
+  &-img {
+    height: 50%;
+  }
   & img {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    width: 100%;
+    height: 100%;
   }
 
   &-stats {

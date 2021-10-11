@@ -37,7 +37,6 @@ export default {
   mounted() {
     Api.fetch().then(({ data }) => {
       this.countries = data;
-      console.log(data);
     });
   },
 };

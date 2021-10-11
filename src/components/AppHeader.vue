@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  background-color: #fff;
+  background-color: var(--white);
   width: 100%;
   padding: 10px 30px;
   display: flex;

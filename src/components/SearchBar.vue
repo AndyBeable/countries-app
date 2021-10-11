@@ -17,7 +17,7 @@ input {
   margin-bottom: 3rem;
   padding: 1rem;
   border: none;
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
