@@ -36,8 +36,15 @@ export default {};
       border: none;
       margin-left: 5px;
       cursor: text;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      width: 100%;
+      height: 1.5rem;
     }
+  }
+
+  ::placeholder {
+    color: var(--gray);
+    letter-spacing: 0.5px;
   }
 }
 </style>
