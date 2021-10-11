@@ -37,4 +37,13 @@ export default {
 html {
   font-family: "Nunito Sans", sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

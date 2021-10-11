@@ -1,15 +1,13 @@
 <template>
   <ul>
-    <li
-      v-for="country in countries"
-      :key="country.name"
-      :flag="country.flag"
-      :name="country.name"
-      :population="country.population"
-      :region="country.region"
-      :capital="country.capital"
-    >
-      <CountryItem />
+    <li v-for="country in countries" :key="country.name">
+      <CountryItem
+        :name="country.name"
+        :population="country.population"
+        :region="country.region"
+        :capital="country.capital"
+        :flag="country.flags.png"
+      />
     </li>
   </ul>
 </template>
@@ -38,3 +36,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+</style>
