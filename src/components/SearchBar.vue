@@ -9,12 +9,17 @@
         @keyup="onTyped"
       />
     </div>
-    <div class="search__filter">Filter</div>
+    <SearchFilter />
   </div>
 </template>
 
 <script>
+import SearchFilter from "./SearchFilter.vue";
 export default {
+  name: "SearchBar",
+  components: {
+    SearchFilter,
+  },
   data() {
     return {
       query: "",

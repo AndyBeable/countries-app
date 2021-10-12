@@ -31,6 +31,7 @@
 
 <script>
 export default {
+  name: "CountryItem",
   props: ["country"],
   filters: {
     formatNumber(num) {
