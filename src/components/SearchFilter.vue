@@ -29,7 +29,9 @@ export default {
 select {
   border: none;
   border-radius: 8px;
+  height: 3.5rem;
   padding: 1rem 2rem;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  color: var(--gray);
 }
 </style>
