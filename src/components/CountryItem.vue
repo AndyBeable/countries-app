@@ -1,71 +1,83 @@
 <template>
-  <div class="country__card">
+  <article class="card">
     <a href="#">
-      <div class="country__card-img">
-        <img :src="flag" alt="" />
-      </div>
-      <div class="country__card-stats">
-        <h2>{{ name }}</h2>
-        <p>
-          <span>Popluation:</span>
-          {{ population }}
-        </p>
-        <p>
-          <span>Region:</span>
-          {{ region }}
-        </p>
-        <p>
-          <span>Capital:</span>
-          {{ capital }}
-        </p>
-      </div>
+      <header>
+        <img
+          :src="country.flags.png"
+          :alt="country.name + ' flag'"
+          class="card__image"
+        />
+      </header>
+      <footer class="card__footer">
+        <h2 class="card__title">{{ country.name }}</h2>
+        <dl class="card__stats">
+          <div>
+            <dt>Popluation:</dt>
+            <dd>{{ country.population | formatNumber }}</dd>
+          </div>
+          <div>
+            <dt>Region:</dt>
+            <dd>{{ country.region }}</dd>
+          </div>
+          <div>
+            <dt>Capital:</dt>
+            <dd>{{ country.capital }}</dd>
+          </div>
+        </dl>
+      </footer>
     </a>
-  </div>
+  </article>
 </template>
 
 <script>
 export default {
-  props: ["name", "population", "region", "capital", "flag"],
+  props: ["country"],
+  filters: {
+    formatNumber(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.country__card {
+.card {
   display: flex;
   margin-bottom: 5rem;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   height: 27rem;
   width: 20rem;
+}
 
-  &-img {
-    height: 50%;
+.card__image {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card__stats {
+  dd,
+  dt {
+    display: inline-block;
   }
-  & img {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    width: 100%;
-    height: 100%;
+
+  dd {
+    margin-bottom: 6px;
+    margin-inline-start: 5px;
   }
 
-  &-stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem 2rem;
-    width: 90%;
-
-    & h2 {
-      margin-bottom: 1rem;
-    }
+  dt {
+    font-weight: 600;
   }
 }
 
-p {
-  margin: 3px 0;
+.card__title {
+  margin-bottom: 1rem;
 }
 
-p span {
-  font-weight: 600;
+.card__footer {
+  padding: 1rem 2rem;
 }
 </style>

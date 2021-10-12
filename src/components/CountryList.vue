@@ -3,14 +3,7 @@
     <SearchBar />
     <ul>
       <li v-for="country in countries" :key="country.name">
-        <CountryItem
-          :name="country.name"
-          :population="country.population"
-          :region="country.region"
-          :capital="country.capital"
-          :flag="country.flags.png"
-          :country="countries"
-        />
+        <CountryItem :country="country" />
       </li>
     </ul>
   </section>

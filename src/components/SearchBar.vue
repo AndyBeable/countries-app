@@ -2,14 +2,24 @@
   <div class="search">
     <div class="search__bar">
       <font-awesome-icon icon="search" class="search__bar-icon" />
-      <input type="text" placeholder="Search for a country..." />
+      <input
+        type="text"
+        placeholder="Search for a country..."
+        v-model="query"
+      />
     </div>
     <div class="search__filter">Filter</div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      query: "",
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
