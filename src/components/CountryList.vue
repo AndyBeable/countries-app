@@ -1,6 +1,9 @@
 <template>
   <section class="country__container">
-    <SearchBar @search="search" />
+    <div class="country__search__container">
+      <SearchBar @search="search" />
+      <SearchFilter @filter="filter" />
+    </div>
     <ul>
       <li v-for="country in countries" :key="country.name">
         <CountryItem :country="country" />
@@ -13,12 +16,14 @@
 import Api from "../api/countries";
 import CountryItem from "../components/CountryItem.vue";
 import SearchBar from "../components/SearchBar.vue";
+import SearchFilter from "../components/SearchFilter.vue";
 
 export default {
   name: "CountryList",
   components: {
     CountryItem,
     SearchBar,
+    SearchFilter,
   },
 
   data() {
@@ -46,6 +51,11 @@ export default {
           this.fetchAll();
         });
     },
+    filter(selectedRegion) {
+      Api.filter(selectedRegion).then(({ data }) => {
+        this.countries = data;
+      });
+    },
   },
 };
 </script>
@@ -58,5 +68,10 @@ ul {
 
 .country__container {
   padding: 0 6rem;
+}
+
+.country__search__container {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
