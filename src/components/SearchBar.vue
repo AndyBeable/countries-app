@@ -6,6 +6,7 @@
         type="text"
         placeholder="Search for a country..."
         v-model="query"
+        @keyup="onTyped"
       />
     </div>
     <div class="search__filter">Filter</div>
@@ -18,6 +19,11 @@ export default {
     return {
       query: "",
     };
+  },
+  methods: {
+    onTyped() {
+      this.$emit("search", this.query);
+    },
   },
 };
 </script>
