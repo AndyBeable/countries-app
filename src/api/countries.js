@@ -11,5 +11,10 @@ export const search = (query) => {
     `https://restcountries.com/v2/name/${query}?fields=name,population,region,flags,capital`
   );
 };
+export const filter = (selectedRegion) => {
+  return axios.get(
+    `https://restcountries.com/v2/continent/${selectedRegion}?fields=name,population,region,flags,capital`
+  );
+};
 
-export default { fetch, search };
+export default { fetch, search, filter };
