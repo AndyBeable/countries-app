@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search__bar">
-      <font-awesome-icon icon="search" class="search__bar-icon" />
+      <font-awesome-icon :icon="['fas', 'search']" class="search__bar-icon" />
       <input
         type="text"
         placeholder="Search for a country..."

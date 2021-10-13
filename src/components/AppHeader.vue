@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <h1 class="header__title">Where in the world?</h1>
+    <font-awesome-icon icon="['fas', 'moon']" class="icon" />
     <p>Dark Mode</p>
   </header>
 </template>
@@ -21,5 +22,9 @@ export default {
   align-items: center;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
+}
+
+.icon {
+  height: 50px;
 }
 </style>

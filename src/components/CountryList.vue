@@ -52,9 +52,13 @@ export default {
         });
     },
     filter(selectedRegion) {
-      Api.filter(selectedRegion).then(({ data }) => {
-        this.countries = data;
-      });
+      Api.filter(selectedRegion)
+        .then(({ data }) => {
+          this.countries = data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
