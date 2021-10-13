@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <h1 class="header__title">Where in the world?</h1>
-    <font-awesome-icon icon="['fas', 'moon']" class="icon" />
+
     <p>Dark Mode</p>
   </header>
 </template>

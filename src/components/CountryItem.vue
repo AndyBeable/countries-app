@@ -3,13 +3,13 @@
     <a href="#">
       <header>
         <img
-          :src="country.flags.png"
+          :src="country.flags.svg"
           :alt="country.name + ' flag'"
           class="card__image"
         />
       </header>
       <footer class="card__footer">
-        <h2 class="card__title">{{ country.name }}</h2>
+        <h2 class="card__title">{{ country.name.common }}</h2>
         <dl class="card__stats">
           <div>
             <dt>Popluation:</dt>
