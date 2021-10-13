@@ -21,7 +21,7 @@
           </div>
           <div>
             <dt>Capital:</dt>
-            <dd>{{ country.capital }}</dd>
+            <dd>{{ country.capital[0] }}</dd>
           </div>
         </dl>
       </footer>
