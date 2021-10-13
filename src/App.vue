@@ -1,6 +1,6 @@
 <template>
   <main>
-    <AppHeader :is-dark="isDark" @toggle-theme="toggleTheme" />
+    <AppHeader :is-dark="isDark" @toggle-mode="toggleMode" />
     <section>
       <CountryList />
     </section>
@@ -26,8 +26,7 @@ export default {
   },
 
   methods: {
-    toggleTheme() {
-      console.log("clicked");
+    toggleMode() {
       this.isDark = !this.isDark;
     },
   },

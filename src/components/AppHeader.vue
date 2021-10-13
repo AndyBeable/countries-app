@@ -1,8 +1,12 @@
 <template>
   <header class="header">
     <h1 class="header__title">Where in the world?</h1>
-
-    <button @click="$emit('toggleTheme')">Dark mode</button>
+    <div class="div">
+      <button @click="$emit('toggleMode')">
+        <font-awesome-icon :icon="['fas', 'moon']" class="search__bar-icon" />
+        Dark mode
+      </button>
+    </div>
   </header>
 </template>
 
@@ -24,7 +28,9 @@ export default {
   margin-bottom: 40px;
 }
 
-.icon {
-  height: 50px;
+button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 </style>
