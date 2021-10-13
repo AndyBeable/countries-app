@@ -2,7 +2,7 @@
   <header class="header">
     <h1 class="header__title">Where in the world?</h1>
 
-    <p>Dark Mode</p>
+    <button @click="$emit('toggleTheme')">Dark mode</button>
   </header>
 </template>
 

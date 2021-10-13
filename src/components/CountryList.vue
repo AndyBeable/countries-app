@@ -5,7 +5,7 @@
       <SearchFilter @filter="filter" />
     </div>
     <ul>
-      <li v-for="country in countries" :key="country.name">
+      <li v-for="country in countries" :key="country.name.common">
         <CountryItem :country="country" />
       </li>
     </ul>

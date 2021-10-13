@@ -1,7 +1,6 @@
 <template>
   <main>
-    <AppHeader />
-
+    <AppHeader :is-dark="isDark" @toggle-theme="toggleTheme" />
     <section>
       <CountryList />
     </section>
@@ -19,6 +18,19 @@ export default {
     AppHeader,
     CountryList,
   },
+
+  data() {
+    return {
+      isDark: false,
+    };
+  },
+
+  methods: {
+    toggleTheme() {
+      console.log("clicked");
+      this.isDark = !this.isDark;
+    },
+  },
 };
 </script>
 
@@ -32,6 +44,8 @@ export default {
   --gray: hsl(0, 0%, 52%);
   --light-gray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
+
+  --bg-colour: var(var(--light-gray));
 }
 
 html {
@@ -45,5 +59,13 @@ a {
 ul {
   display: flex;
   flex-wrap: wrap;
+}
+
+.dark {
+  --bg-color: var(--very-dark-blue);
+}
+
+.app {
+  background-color: var(--bg-color);
 }
 </style>

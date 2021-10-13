@@ -8,7 +8,7 @@ export const fetch = () => {
 
 export const search = (query) => {
   return axios.get(
-    `https://restcountries.com/v3.1/name/${query}?fields=name,population,region,flags,capital`
+    `https://restcountries.com/v3.1/name/${query}?fullText=truefields=name,population,region,flags,capital`
   );
 };
 export const filter = (selectedRegion) => {
