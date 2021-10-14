@@ -1,10 +1,12 @@
 <template>
-  <main>
-    <AppHeader :is-dark="isDark" @toggle="toggleMode" />
-    <section>
-      <CountryList />
-    </section>
-  </main>
+  <div class="app" :class="isDark ? 'dark' : 'light'">
+    <main>
+      <AppHeader @toggle="toggleMode" />
+      <section>
+        <CountryList />
+      </section>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -44,7 +46,21 @@ export default {
   --light-gray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
 
-  --bg-colour: var(var(--light-gray));
+  --bg-colour: var(--light-gray);
+  --header-bg: var(--light-gray);
+  --card-bg: var(--light-gray);
+  --text-color: var(--black);
+}
+
+.dark {
+  --bg-color: var(--very-dark-blue);
+  --header-bg: var(--dark-blue);
+  --card-bg: var(--dark-blue);
+  --text-color: var(--white);
+}
+
+.app {
+  background-color: var(--bg-color);
 }
 
 html {
