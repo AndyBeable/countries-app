@@ -18,7 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  background-color: var(--white);
+  background-color: var(--header-bg);
+  color: var(--text-color);
   width: 100%;
   padding: 10px 30px;
   display: flex;
@@ -32,5 +33,6 @@ button {
   border: none;
   background-color: inherit;
   cursor: pointer;
+  color: var(--text-color);
 }
 </style>

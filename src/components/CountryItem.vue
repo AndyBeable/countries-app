@@ -49,6 +49,8 @@ export default {
   border-radius: 8px;
   height: 27rem;
   width: 20rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
 }
 
 .card__image {

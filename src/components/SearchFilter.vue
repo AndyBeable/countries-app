@@ -32,6 +32,10 @@ select {
   height: 3.5rem;
   padding: 1rem 2rem;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-  color: var(--gray);
+  color: var(--text-color);
+  background: var(--header-bg);
+  font-family: "Nunito Sans";
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 </style>

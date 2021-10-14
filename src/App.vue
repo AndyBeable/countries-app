@@ -47,8 +47,8 @@ export default {
   --white: hsl(0, 0%, 100%);
 
   --bg-colour: var(--light-gray);
-  --header-bg: var(--light-gray);
-  --card-bg: var(--light-gray);
+  --header-bg: var(--white);
+  --card-bg: var(--white);
   --text-color: var(--black);
 }
 

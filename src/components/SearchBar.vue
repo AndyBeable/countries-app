@@ -34,6 +34,8 @@ export default {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2.5rem;
+  background-color: var(--header-bg);
+  border-radius: 3px;
 
   &__bar {
     display: flex;
@@ -42,7 +44,6 @@ export default {
     min-width: 20rem;
     padding: 1rem 2rem;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
 
     &-icon {
       color: var(--gray);
@@ -55,6 +56,7 @@ export default {
       font-size: 1rem;
       width: 100%;
       height: 1.5rem;
+      background-color: var(--header-bg);
     }
   }
 
