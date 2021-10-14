@@ -5,7 +5,7 @@
       <SearchFilter @filter="filter" />
     </div>
     <ul>
-      <li v-for="country in countries" :key="country.name.common">
+      <li v-for="country in filteredCountries" :key="country.name.common">
         <CountryItem :country="country" />
       </li>
     </ul>
@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       countries: [],
+      region: "",
     };
   },
 
@@ -51,14 +52,15 @@ export default {
           this.fetchAll();
         });
     },
-    filter(selectedRegion) {
-      Api.filter(selectedRegion)
-        .then(({ data }) => {
-          this.countries = data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    filter(region) {
+      this.region = region;
+    },
+  },
+  computed: {
+    filteredCountries() {
+      return this.countries.filter((country) => {
+        return country.region === this.region;
+      });
     },
   },
 };

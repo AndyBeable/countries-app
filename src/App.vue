@@ -59,12 +59,4 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
-
-.dark {
-  --bg-color: var(--very-dark-blue);
-}
-
-.app {
-  background-color: var(--bg-color);
-}
 </style>

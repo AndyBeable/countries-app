@@ -2,7 +2,7 @@
   <header class="header">
     <h1 class="header__title">Where in the world?</h1>
     <div class="div">
-      <button @click="$emit('toggleMode')">
+      <button @click="$emit('toggleMode()')">
         <font-awesome-icon :icon="['fas', 'moon']" class="search__bar-icon" />
         Dark mode
       </button>
