@@ -1,6 +1,6 @@
 <template>
   <main>
-    <AppHeader :is-dark="isDark" @toggle-mode="toggleMode" />
+    <AppHeader :is-dark="isDark" @toggle="toggleMode" />
     <section>
       <CountryList />
     </section>
