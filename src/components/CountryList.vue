@@ -69,15 +69,27 @@ export default {
 <style scoped>
 ul {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
-.country__container {
-  padding: 0 6rem;
+@media screen and (min-width: 786px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .country__search__container {
-  display: flex;
-  justify-content: space-between;
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 786px) {
+  .country__search__container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 </style>

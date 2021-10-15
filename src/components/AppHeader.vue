@@ -29,6 +29,16 @@ export default {
   margin-bottom: 40px;
 }
 
+.header__title {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 786px) {
+  .header__title {
+    font-size: 28px;
+  }
+}
+
 button {
   border: none;
   background-color: inherit;
