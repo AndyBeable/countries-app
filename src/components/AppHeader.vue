@@ -4,7 +4,7 @@
     <div class="div">
       <button @click="$emit('toggle')">
         <font-awesome-icon :icon="['fas', 'moon']" class="search__bar-icon" />
-        Dark mode
+        Dark Mode
       </button>
     </div>
   </header>

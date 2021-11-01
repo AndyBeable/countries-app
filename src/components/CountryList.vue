@@ -78,6 +78,7 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 0 1rem;
   }
 }
 
