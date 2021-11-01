@@ -5,6 +5,7 @@
       <section>
         <CountryList />
       </section>
+      <router-view />
     </main>
   </div>
 </template>

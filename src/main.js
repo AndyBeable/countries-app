@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 import "./styles/App.scss";
 
 import Home from "./pages/Home.vue";
+import Details from "./pages/Details.vue";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch, faMoon } from "@fortawesome/free-solid-svg-icons";
@@ -18,7 +19,10 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 const router = new VueRouter({
   mode: "history",
   base: __dirname,
-  routes: [{ path: "/", component: Home }],
+  routes: [
+    { path: "/", component: Home },
+    { path: "/details", component: Details },
+  ],
 });
 
 Vue.config.productionTip = false;
