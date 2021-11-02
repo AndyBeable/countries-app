@@ -1,23 +1,49 @@
 <template>
   <div class="details-container">
-    <div>
-      <img :src="country.flags.svg" />
+    <div class="flag-container">
+      <img :src="country.flags.svg" class="country-flag" />
     </div>
     <div>
       <header>
         <h4>{{ country.name }}</h4>
       </header>
-      <div>
-        <p>{{ country.nativeName }}</p>
-        <p>{{ country.population }}</p>
-        <p>{{ country.region }}</p>
-        <p>{{ country.subregion }}</p>
-        <p>{{ country.capital }}</p>
-      </div>
-      <div>
-        <p>{{ country.topLevelDomain[0] }}</p>
-        <p>{{ country.currencies.map((currency) => currency.name).join() }}</p>
-        <p>{{ country.languages.map((language) => language.name).join() }}</p>
+      <div class="country-stats">
+        <div>
+          <p>
+            <span>Native Name:</span>
+            {{ country.nativeName }}
+          </p>
+          <p>
+            <span>Population:</span>
+            {{ country.population }}
+          </p>
+          <p>
+            <span>Region:</span>
+            {{ country.region }}
+          </p>
+          <p>
+            <span>Sub Region:</span>
+            {{ country.subregion }}
+          </p>
+          <p>
+            <span>Capital:</span>
+            {{ country.capital }}
+          </p>
+        </div>
+        <div>
+          <p>
+            <span>Top Level Domain:</span>
+            {{ country.topLevelDomain[0] }}
+          </p>
+          <p>
+            <span>Currencies:</span>
+            {{ country.currencies.map((currency) => currency.name).join() }}
+          </p>
+          <p>
+            <span>Languages:</span>
+            {{ country.languages.map((language) => language.name).join() }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -37,5 +63,30 @@ export default {
 <style scoped>
 .details-container {
   display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  align-items: center;
+  gap: 5rem;
+}
+
+.country-flag {
+  height: 30rem;
+  border-radius: 8px;
+}
+
+h4 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.country-stats {
+  display: flex;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+p > span {
+  font-weight: 600;
 }
 </style>
