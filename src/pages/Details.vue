@@ -19,6 +19,7 @@ export default {
   beforeCreate() {
     Api.fetchCountry(this.$route.params.code).then((response) => {
       this.country = response.data;
+      console.log(response.data);
     });
   },
 };
