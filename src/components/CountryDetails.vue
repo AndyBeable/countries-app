@@ -4,7 +4,12 @@
 
 <script>
 export default {
-  props: ["country"],
+  props: {
+    country: {
+      required: true,
+      type: Object,
+    },
+  },
 };
 </script>
 

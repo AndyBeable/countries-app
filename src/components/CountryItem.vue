@@ -1,34 +1,32 @@
 <template>
-  <router-link to="/details">
-    <article class="card">
-      <a href="#">
-        <header>
-          <img
-            :src="country.flags.svg"
-            :alt="country.name + ' flag'"
-            class="card__image"
-          />
-        </header>
-        <footer class="card__footer">
-          <h2 class="card__title">{{ country.name.common }}</h2>
-          <dl class="card__stats">
-            <div>
-              <dt>Popluation:</dt>
-              <dd>{{ country.population | formatNumber }}</dd>
-            </div>
-            <div>
-              <dt>Region:</dt>
-              <dd>{{ country.region }}</dd>
-            </div>
-            <div>
-              <dt>Capital:</dt>
-              <dd>{{ country.capital[0] }}</dd>
-            </div>
-          </dl>
-        </footer>
-      </a>
-    </article>
-  </router-link>
+  <article class="card">
+    <router-link :to="{ name: 'details', params: { code: country.cca3 } }">
+      <header>
+        <img
+          :src="country.flags.svg"
+          :alt="country.name + ' flag'"
+          class="card__image"
+        />
+      </header>
+      <footer class="card__footer">
+        <h2 class="card__title">{{ country.name.common }}</h2>
+        <dl class="card__stats">
+          <div>
+            <dt>Popluation:</dt>
+            <dd>{{ country.population | formatNumber }}</dd>
+          </div>
+          <div>
+            <dt>Region:</dt>
+            <dd>{{ country.region }}</dd>
+          </div>
+          <div>
+            <dt>Capital:</dt>
+            <dd>{{ country.capital[0] }}</dd>
+          </div>
+        </dl>
+      </footer>
+    </router-link>
+  </article>
 </template>
 
 <script>

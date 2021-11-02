@@ -41,6 +41,7 @@ export default {
     fetchAll() {
       Api.fetch().then(({ data }) => {
         this.countries = data;
+        console.log(data);
       });
     },
     search(query) {
@@ -58,6 +59,10 @@ export default {
   },
   computed: {
     filteredCountries() {
+      if (this.region === "") {
+        return this.countries;
+      }
+
       return this.countries.filter((country) => {
         return country.region === this.region;
       });

@@ -1,6 +1,8 @@
 <template>
   <header class="header">
-    <h1 class="header__title">Where in the world?</h1>
+    <h1 class="header__title">
+      <router-link to="/">Where in the world?</router-link>
+    </h1>
     <div class="div">
       <button @click="$emit('toggle')">
         <font-awesome-icon :icon="['fas', 'moon']" class="search__bar-icon" />

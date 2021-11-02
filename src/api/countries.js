@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const fields = ["name", "population", "region", "flags", "capital"];
+const fields = ["name", "population", "region", "flags", "capital", "cca3"];
 
 export const fetch = () => {
   return axios.get(
@@ -16,4 +16,8 @@ export const search = (query) => {
   );
 };
 
-export default { fetch, search };
+export const fetchCountry = (code) => {
+  return axios.get(`https://restcountries.com/v2/alpha/${code}`);
+};
+
+export default { fetch, search, fetchCountry };

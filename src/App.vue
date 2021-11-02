@@ -2,9 +2,6 @@
   <div class="app" :class="isDark ? 'dark' : 'light'">
     <main>
       <AppHeader @toggle="toggleMode" />
-      <section>
-        <CountryList />
-      </section>
       <router-view />
     </main>
   </div>
@@ -12,14 +9,12 @@
 
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import CountryList from "./components/CountryList.vue";
 
 export default {
   name: "App",
 
   components: {
     AppHeader,
-    CountryList,
   },
 
   data() {
