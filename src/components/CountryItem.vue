@@ -1,6 +1,6 @@
 <template>
   <article class="card">
-    <router-link :to="{ name: 'details', params: { code: country.cca3 } }">
+    <RouterLink :to="{ name: 'details', params: { code: country.cca3 } }">
       <header>
         <img
           :src="country.flags.svg"
@@ -25,7 +25,7 @@
           </div>
         </dl>
       </footer>
-    </router-link>
+    </RouterLink>
   </article>
 </template>
 
