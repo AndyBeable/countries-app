@@ -8,7 +8,7 @@
         <h4>{{ country.name }}</h4>
       </header>
       <div class="country-stats">
-        <div>
+        <div class="country-stats-left">
           <p>
             <span>Native Name:</span>
             {{ country.nativeName }}
@@ -30,7 +30,7 @@
             {{ country.capital }}
           </p>
         </div>
-        <div>
+        <div class="country-stats-right">
           <p>
             <span>Top Level Domain:</span>
             {{ country.topLevelDomain[0] }}
@@ -44,6 +44,12 @@
             {{ country.languages.map((language) => language.name).join() }}
           </p>
         </div>
+      </div>
+      <div class="country-borders">
+        <strong>Border Countries:</strong>
+        <span v-for="border in country.borders" :key="border">
+          {{ border }}
+        </span>
       </div>
     </div>
   </div>
@@ -82,6 +88,11 @@ h4 {
 
 .country-stats {
   display: flex;
+  margin-bottom: 3rem;
+}
+
+.country-stats-left {
+  margin-right: 3rem;
 }
 
 p:not(:last-of-type) {
@@ -89,5 +100,12 @@ p:not(:last-of-type) {
 }
 p > span {
   font-weight: 600;
+}
+
+.country-borders span {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 </style>
