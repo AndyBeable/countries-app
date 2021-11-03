@@ -41,7 +41,6 @@ export default {
     fetchAll() {
       Api.fetch().then(({ data }) => {
         this.countries = data;
-        console.log(data);
       });
     },
     search(query) {

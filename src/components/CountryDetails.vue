@@ -57,7 +57,7 @@
         <div class="country-borders">
           <p><strong>Border Countries:</strong></p>
           <span v-for="border in country.borders" :key="border">
-            <RouterLink to="">
+            <RouterLink to="" class="border-btn">
               {{ border }}
             </RouterLink>
           </span>
@@ -82,6 +82,7 @@ export default {
 .container {
   padding: 5rem 10rem;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .details-container {
@@ -89,6 +90,7 @@ export default {
   padding-top: 5rem;
   align-items: center;
   gap: 7rem;
+  color: var(--text-color);
 }
 
 .country-flag {
@@ -127,10 +129,13 @@ p > span {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
 }
 
 .btn {
   padding: 0.5rem 2.2rem;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  color: var(--text-color);
 }
 </style>
