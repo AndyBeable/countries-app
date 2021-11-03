@@ -7,11 +7,16 @@ import Home from "./pages/Home.vue";
 import Details from "./pages/Details.vue";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faMoon,
+  faLongArrowAltLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faSearch);
 library.add(faMoon);
+library.add(faLongArrowAltLeft);
 
 Vue.use(VueRouter);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
