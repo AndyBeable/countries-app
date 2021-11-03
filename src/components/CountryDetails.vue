@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <RouterLink to="/" class="btn">
-      <font-awesome-icon icon="long-arrow-alt-left" />
+      <font-awesome-icon icon="long-arrow-alt-left" class="icon" />
       Back
     </RouterLink>
     <div class="details-container">
@@ -137,5 +137,9 @@ p > span {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   background-color: var(--card-bg);
   color: var(--text-color);
+}
+
+.icon {
+  margin-right: 0.5rem;
 }
 </style>
