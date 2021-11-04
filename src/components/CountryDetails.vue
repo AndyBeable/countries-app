@@ -80,23 +80,42 @@ export default {
 
 <style scoped>
 .container {
-  padding: 5rem 10rem;
-  margin: 0 auto;
+  padding: 0rem 2rem;
+  margin: 0rem 3rem;
   height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
 }
 
 .details-container {
   display: flex;
+  flex-direction: column;
   padding-top: 5rem;
   align-items: center;
   gap: 7rem;
   color: var(--text-color);
 }
 
+@media screen and (min-width: 768px) {
+  .details-container {
+    flex-direction: row;
+  }
+}
+
 .country-flag {
-  width: 560px;
+  width: 375px;
   border-radius: 8px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .country-flag {
+    width: 560px;
+  }
 }
 
 h4 {
