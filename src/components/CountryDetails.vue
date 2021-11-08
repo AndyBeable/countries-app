@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="country">
     <RouterLink to="/" class="btn">
       <font-awesome-icon icon="long-arrow-alt-left" class="icon" />
       Back
