@@ -103,11 +103,12 @@ export default {
 @media screen and (min-width: 768px) {
   .details-container {
     flex-direction: row;
+    justify-content: center;
   }
 }
 
 .country-flag {
-  width: 375px;
+  width: 270px;
   border-radius: 8px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
